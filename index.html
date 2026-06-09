@@ -1,74 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-
-    <link rel="stylesheet" href="./css/styles.css" />
-
-    <title>Frontend Mentor | Interactive rating component</title>
+    <title>Rating Card</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="./assets/js/index.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <div class="card card-1">
-        <header class="star">
-          <div class="star-holder">
-            <img src="./images/icon-star.svg" alt="Star Icon" />
-          </div>
-        </header>
-        <main class="rating">
-          <div class="content-rate">
-            <h1>How did we do?</h1>
-            <p>
-              Please let us know how we did with your support request. All
-              feedback is appreciated to help us improve our offering!
-            </p>
-          </div>
-          <div class="rates">
-            <button class="btn-rate">1</button>
-            <button class="btn-rate">2</button>
-            <button class="btn-rate">3</button>
-            <button class="btn-rate">4</button>
-            <button class="btn-rate">5</button>
-          </div>
-          <div class="submit-sect">
-            <button class="btn-submit">Submit</button>
-          </div>
-        </main>
-      </div>
-      <!-- Rating state end -->
-
-      <!-- Thank you state start -->
-      <div class="card card-2">
-        <header class="h-thanks">
-          <div class="img-thanks">
-            <img src="./images/illustration-thank-you.svg" alt="" />
-          </div>
-        </header>
-        <main class="thanks">
-          <div class="select-rate">
-            <p>You selected <span id="rate">4</span> out of 5</p>
-          </div>
-          <div class="thanks-content">
-            <h2>Thank you!</h2>
-            <p>
-              We appreciate you taking the time to give a rating. If you ever
-              need more support, don’t hesitate to get in touch!
-            </p>
-          </div>
-        </main>
-      </div>
+    <div class="card">
+      <header class="card-header">
+        <img src="./assets/images/icon-star.svg" alt="A star Icon" />
+      </header>
+      <main class="card-body">
+        <article class="card-body-head">
+          <h1>How did we do?</h1>
+        </article>
+        <article class="card-body-body">
+          <p>
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+        </article>
+        <article class="card-body-footer">
+          <button type="button" data-tip="1" class="btn btn-rate">1</button>
+          <button type="button" data-tip="2" class="btn btn-rate">2</button>
+          <button type="button" data-tip="3" class="btn btn-rate">3</button>
+          <button type="button" data-tip="4" class="btn btn-rate">4</button>
+          <button type="button" data-tip="5" class="btn btn-rate">5</button>
+        </article>
+      </main>
+      <footer class="card-footer">
+        <button class="btn btn-submit" type="submit">SUBMIT</button>
+      </footer>
     </div>
 
-    <!-- Thank you state end -->
-    <script src="./js/script.js"></script>
+    <div class="card hidden">
+      <header class="card-header-2">
+        <img
+          src="./assets/images/illustration-thank-you.svg"
+          alt="Thank You Card"
+        />
+      </header>
+      <main class="card-body">
+        <p class="rating">You selected <span id="rate">X</span> out of 5</p>
+      </main>
+      <footer class="card-footer">
+        <h2>Thank You</h2>
+        <p>
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
