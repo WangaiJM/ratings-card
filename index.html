@@ -13,8 +13,12 @@
         <img src="./assets/images/icon-star.svg" alt="A star Icon" />
       </header>
       <main class="card-body">
-        <article class="card-body-head">
-          <h1>How did we do?</h1>
+        <article
+          class="card-body-head"
+          role="radiogroup"
+          aria-labelledby="rating-question"
+        >
+          <h1 id="rating-question">How did we do?</h1>
         </article>
         <article class="card-body-body">
           <p>
@@ -23,11 +27,51 @@
           </p>
         </article>
         <article class="card-body-footer">
-          <button type="button" data-tip="1" class="btn btn-rate">1</button>
-          <button type="button" data-tip="2" class="btn btn-rate">2</button>
-          <button type="button" data-tip="3" class="btn btn-rate">3</button>
-          <button type="button" data-tip="4" class="btn btn-rate">4</button>
-          <button type="button" data-tip="5" class="btn btn-rate">5</button>
+          <button
+            type="button"
+            data-tip="1"
+            class="btn btn-rate"
+            role="radio"
+            aria-checked="false"
+          >
+            1
+          </button>
+          <button
+            type="button"
+            data-tip="2"
+            class="btn btn-rate"
+            role="radio"
+            aria-checked="false"
+          >
+            2
+          </button>
+          <button
+            type="button"
+            data-tip="3"
+            class="btn btn-rate"
+            role="radio"
+            aria-checked="false"
+          >
+            3
+          </button>
+          <button
+            type="button"
+            data-tip="4"
+            class="btn btn-rate"
+            role="radio"
+            aria-checked="false"
+          >
+            4
+          </button>
+          <button
+            type="button"
+            data-tip="5"
+            class="btn btn-rate"
+            role="radio"
+            aria-checked="false"
+          >
+            5
+          </button>
         </article>
       </main>
       <footer class="card-footer">
@@ -35,14 +79,14 @@
       </footer>
     </div>
 
-    <div class="card hidden">
+    <div class="card hidden" aria-hidden="true">
       <header class="card-header-2">
         <img
           src="./assets/images/illustration-thank-you.svg"
-          alt="Thank You Card"
+          alt="Illustration showing appreciation after submitting a rating"
         />
       </header>
-      <main class="card-body">
+      <main class="card-body" aria-live="polite">
         <p class="rating">You selected <span id="rate">X</span> out of 5</p>
       </main>
       <footer class="card-footer">
